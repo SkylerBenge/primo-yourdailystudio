@@ -838,13 +838,13 @@ h3 {
   font-weight: 800;
 }
 
-.heading, .subheading, .body, .subfeature, .feature-title {
+.heading, .subheading, .body, .subfeature, .feature-title, .card {
   opacity: 0;
   visibility: hidden;
   will-change: opacity, visibility;
 }
 
-.heading {
+.heading, .card {
   transform: translateY(5vh);
   transition: opacity 0.8s ease-in, transform 1.2s ease-out;
 }
