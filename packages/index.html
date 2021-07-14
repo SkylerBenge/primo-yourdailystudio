@@ -6,7 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="../styles.css" />
         
-        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet"> 
         
       </head>
       <body data-instant-intensity="all" class="primo-page">   
@@ -104,7 +106,45 @@
   }</style>
       </div>
       
-        
+        <script>
+  $( '.block' ).each(function() {
+    var distance = $(this).offset().top;    
+    var block = $(this);
+    
+    function fadeUp() {
+      if ( $(window).scrollTop() >= distance - $(window).height() / 1.2 ) {
+          block.find('.heading').addClass('is-visible');
+          block.find('.feature-title').addClass('is-visible');
+          block.find('li').each(function(i){
+            setTimeout(function(){
+              $('.mosaic').eq(i).addClass('pop-up');
+            }, 400 * i);
+          });
+      }    
+      if ( $(window).scrollTop() >= distance - $(window).height() / 1.3 ) {
+          block.find('.subheading').addClass('is-visible');
+      }
+      if ( $(window).scrollTop() >= distance - $(window).height() / 1.4 ) {
+          block.find('.body').addClass('is-visible');
+          block.find('.subfeature').addClass('is-visible');
+      }      
+    }
+    
+    $(window).scroll(function() {
+      fadeUp();    
+    });
+
+    $( document ).ready(function() {  
+        fadeUp();
+    });      
+  });
+
+  $('.contact').click(function() {
+    console.log('test');
+    var target = $('#contact');
+    $('html, body').animate({ scrollTop: target.offset().top - ($(window).height() / 1.5)}, 500);
+  });  
+</script>	
         
       </body>
     </html>
