@@ -540,6 +540,10 @@ video {
   border-radius: 0.5rem;
 }
 
+.rounded-2xl {
+  border-radius: 1rem;
+}
+
 .rounded-3xl {
   border-radius: 1.5rem;
 }
@@ -604,6 +608,10 @@ video {
   font-weight: 700;
 }
 
+.h-full {
+  height: 100%;
+}
+
 .list-none {
   list-style-type: none;
 }
@@ -648,12 +656,24 @@ video {
   padding-left: 1.5rem;
 }
 
+.fixed {
+  position: fixed;
+}
+
 .absolute {
   position: absolute;
 }
 
 .relative {
   position: relative;
+}
+
+.bottom-0 {
+  bottom: 0px;
+}
+
+.left-0 {
+  left: 0px;
 }
 
 * {
@@ -691,6 +711,10 @@ video {
 
 .w-2\/4 {
   width: 50%;
+}
+
+.w-2\/6 {
+  width: 33.333333%;
 }
 
 .w-full {
