@@ -122,6 +122,7 @@ Need a way to brand yourself? Need an online presence? I offer custom boutique w
 </div>
 
 <div class="modal flex items-center justify-center fixed left-0 bottom-0 w-full h-full">
+  <i class="fas fa-times absolute"></i>
     <div class="popup relative w-2/6 rounded-2xl shadow-xl">
       <div class="popup-icon-container flex items-center absolute rounded-full shadow-xl bg-yellow-500">
       	<i class="fas fa-shopping-cart"></i>
@@ -174,13 +175,16 @@ Need a way to brand yourself? Need an online presence? I offer custom boutique w
 
 <script>
   $('.more-info').click(function() {
-    $('.modal').fadeIn();
+    $('.modal').css("display", "flex")
+.fadeIn();
   });
+  $('.modal i').on( "click", function() {
+    $('.modal').fadeOut();
+  });  
 </script>  </div>
           
         </div>
         <style type="text/css">#component-loinm .modal {
-    display: none;
     background-image: linear-gradient(
 90deg
 , rgba(240, 112, 132, .6), rgba(233, 136, 83, .6));
@@ -226,6 +230,11 @@ Need a way to brand yourself? Need an online presence? I offer custom boutique w
   #component-loinm .popup-icon-container i {
     font-size: 3vw;
     margin: 0 auto;
+  }
+  #component-loinm .modal i {
+    top: 7%;
+    right: 1%;
+    font-size: 3vw;
   }
   #component-loinm .package-heading, #component-loinm .popup-heading, #component-loinm .package-price, #component-loinm .popup-price {
     font-weight: bold;
