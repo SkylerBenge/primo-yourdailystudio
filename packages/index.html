@@ -121,9 +121,9 @@ Need a way to brand yourself? Need an online presence? I offer custom boutique w
     </div>
 </div>
 
-<div class="modal  flex items-center justify-center fixed left-0 bottom-0 w-full h-full">
+<div class="modal flex items-center justify-center fixed left-0 bottom-0 w-full h-full">
   <i class="fas fa-times absolute"></i>
-    <div class="popup relative w-2/6 rounded-2xl shadow-xl">
+    <div class="popup e-com relative w-2/6 rounded-2xl shadow-xl">
       <div class="popup-icon-container flex items-center absolute rounded-full shadow-xl bg-yellow-500">
       	<i class="fas fa-shopping-cart"></i>
       </div>
@@ -141,7 +141,7 @@ Need a way to brand yourself? Need an online presence? I offer custom boutique w
         <p class="popup-price">Cost: $5,000 to $7,500</p>
       </div>
     </div>
-    <div class="popup relative w-2/6 rounded-2xl shadow-xl">
+    <div class="popup e-com relative w-2/6 rounded-2xl shadow-xl">
       <div class="popup-icon-container flex items-center absolute rounded-full shadow-xl bg-yellow-500">
       	<i class="fas fa-cart-plus"></i>
       </div>
@@ -156,7 +156,7 @@ Need a way to brand yourself? Need an online presence? I offer custom boutique w
         <p class="popup-price">$7,500 to $11,000</p>
       </div>
     </div>
-    <div class="popup relative w-2/6 rounded-2xl shadow-xl">
+    <div class="popup e-com relative w-2/6 rounded-2xl shadow-xl">
       <div class="popup-icon-container flex items-center absolute rounded-full shadow-xl bg-yellow-500">
       	<i class="fas fa-code"></i>
       </div>
@@ -171,6 +171,36 @@ Need a way to brand yourself? Need an online presence? I offer custom boutique w
         <p class="popup-price">$11,000 to $20,000</p>
       </div>
     </div>
+    <div class="popup brochure relative w-2/6 rounded-2xl shadow-xl">
+      <div class="popup-icon-container flex items-center absolute rounded-full shadow-xl bg-yellow-500">
+      	<i class="fas fa-book-open"></i>
+      </div>
+      <div>
+        <h3 class="popup-heading">Basic Brochure Site</h3>
+        <div class="popup-info"><p><br></p>
+<p><strong>What’s Included:</strong> Homepage, About Us Page, Contact Us Page, Blog, Gallery/Lookbook, 1 Additional page of Clients choice <br></p>
+<p><strong>How:</strong> I will work with the client to choose a theme as a base for the website we will use the customizer built into the theme for 90% of the development. <br></p>
+<p><strong>Why:</strong> I will connect the URL’s, walk through CMS (TBD) with the client, and make tweaks to the theme to get what the client needs out of it. <br></p>
+<p><strong>Additional:</strong>Any custom dev hours over 20 will cost $80 per hour</p>
+<p><br></p></div>
+        <p class="popup-price">$4,000 to $6,000</p>
+      </div>
+    </div>
+    <div class="popup brochure relative w-2/6 rounded-2xl shadow-xl">
+      <div class="popup-icon-container flex items-center absolute rounded-full shadow-xl bg-yellow-500">
+      	<i class="fas fa-laptop-code"></i>
+      </div>
+      <div>
+        <h3 class="popup-heading">Advanced Brochure Site</h3>
+        <div class="popup-info"><p><br></p>
+<p><strong>What’s Included:</strong> Homepage, About Us Page, Contact Us Page, Gallery/Lookbook, 3 Additional page of Clients choice <br></p>
+<p><strong>How:</strong> I will create a Custom Static Site for the client <br></p>
+<p><strong>Why:</strong> I will connect the URL’s, walk through CMS (TBD) with the client, and make the site to the clients exact specifications <br></p>
+<p><strong>Additional:</strong> Any custom dev hours over 100 will cost $80 per hour</p>
+<p><br></p></div>
+        <p class="popup-price">$8,000 to $12,000</p>
+      </div>
+    </div>
 </div>
 
 <script>
@@ -179,14 +209,18 @@ Need a way to brand yourself? Need an online presence? I offer custom boutique w
       
     for (var i = 0; i < classList.length; i++) {
       var modal = $('.modal.'+classList[i]+'');
-      
-      if (modal.length) {
-        modal.fadeIn().css("display", "flex");
-        $('html, body').css({
-          overflow: 'hidden'
-        });        
-      }
+      $( '.popup' ).each(function() {
+        var popup = $('.popup.'+classList[i]+'');
+        
+        if (popup.length) {
+          popup.show();
+          $('html, body').css({
+            overflow: 'hidden'
+          }); 
+        }
+      });
     }
+    $('.modal').fadeIn().css("display", "flex");
   });
   
   $('.modal i').on( "click", function() {
@@ -220,6 +254,7 @@ Need a way to brand yourself? Need an online presence? I offer custom boutique w
     background-color: #fff;
     margin: 2vw;
     padding: 4vw;
+    display: none;
   }
   #component-loinm .package:first-of-type, #component-loinm .popup:first-of-type {
     grid-area: span 2 / span 1;
