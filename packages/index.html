@@ -175,19 +175,30 @@ Need a way to brand yourself? Need an online presence? I offer custom boutique w
 
 <script>
   $('.more-info').click(function() {
-    $('.modal').css("display", "flex")
-.fadeIn();
+    $('.modal')
+.fadeIn().css("display", "flex");
+    $('html, body').css({
+      overflow: 'hidden',
+      height: '100%'
+    }); 
   });
+  
   $('.modal i').on( "click", function() {
     $('.modal').fadeOut();
+    $('html, body').css({
+      overflow: 'auto',
+      height: 'auto'
+    });
   });  
 </script>  </div>
           
         </div>
         <style type="text/css">#component-loinm .modal {
+    display: none;
     background-image: linear-gradient(
 90deg
 , rgba(240, 112, 132, .6), rgba(233, 136, 83, .6));
+    z-index: 2;
   }
   #component-loinm .package,#component-loinm .popup {
     margin: 2vw;
