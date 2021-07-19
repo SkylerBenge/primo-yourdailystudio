@@ -123,7 +123,7 @@ Need a way to brand yourself? Need an online presence? I offer custom boutique w
 
 <div class="modal flex items-center justify-center fixed left-0 bottom-0 w-full h-full">
   <i class="fas fa-times absolute"></i>
-    <div class="popup e-com relative w-2/6 rounded-2xl shadow-xl">
+    <div class="popup e-com relative w-full md:w-2/6 rounded-2xl shadow-xl">
       <div class="popup-icon-container flex items-center absolute rounded-full shadow-xl bg-yellow-500">
       	<i class="fas fa-shopping-cart"></i>
       </div>
@@ -141,7 +141,7 @@ Need a way to brand yourself? Need an online presence? I offer custom boutique w
         <p class="popup-price">Cost: $5,000 to $7,500</p>
       </div>
     </div>
-    <div class="popup e-com relative w-2/6 rounded-2xl shadow-xl">
+    <div class="popup e-com relative w-full md:w-2/6 rounded-2xl shadow-xl">
       <div class="popup-icon-container flex items-center absolute rounded-full shadow-xl bg-yellow-500">
       	<i class="fas fa-cart-plus"></i>
       </div>
@@ -156,7 +156,7 @@ Need a way to brand yourself? Need an online presence? I offer custom boutique w
         <p class="popup-price">$7,500 to $11,000</p>
       </div>
     </div>
-    <div class="popup e-com relative w-2/6 rounded-2xl shadow-xl">
+    <div class="popup e-com relative w-full md:w-2/6 rounded-2xl shadow-xl">
       <div class="popup-icon-container flex items-center absolute rounded-full shadow-xl bg-yellow-500">
       	<i class="fas fa-code"></i>
       </div>
@@ -171,7 +171,7 @@ Need a way to brand yourself? Need an online presence? I offer custom boutique w
         <p class="popup-price">$11,000 to $20,000</p>
       </div>
     </div>
-    <div class="popup brochure relative w-2/6 rounded-2xl shadow-xl">
+    <div class="popup brochure relative w-full md:w-2/6 rounded-2xl shadow-xl">
       <div class="popup-icon-container flex items-center absolute rounded-full shadow-xl bg-yellow-500">
       	<i class="fas fa-book-open"></i>
       </div>
@@ -186,7 +186,7 @@ Need a way to brand yourself? Need an online presence? I offer custom boutique w
         <p class="popup-price">$4,000 to $6,000</p>
       </div>
     </div>
-    <div class="popup brochure relative w-2/6 rounded-2xl shadow-xl">
+    <div class="popup brochure relative w-full md:w-2/6 rounded-2xl shadow-xl">
       <div class="popup-icon-container flex items-center absolute rounded-full shadow-xl bg-yellow-500">
       	<i class="fas fa-laptop-code"></i>
       </div>
@@ -225,6 +225,7 @@ Need a way to brand yourself? Need an online presence? I offer custom boutique w
   
   $('.modal i').on( "click", function() {
     $('.modal').fadeOut();
+    $('.popup').hide();
     $('html, body').css({
       overflow: 'auto'
     });
@@ -239,21 +240,13 @@ Need a way to brand yourself? Need an online presence? I offer custom boutique w
 , rgba(240, 112, 132, .6), rgba(233, 136, 83, .6));
     z-index: 2;
   }
-  #component-loinm .package,#component-loinm .popup {
-    margin: 2vw;
-    padding: 4vw;
-  }
   #component-loinm .package {
-    margin: 2vw;
-    padding: 4vw;
     background-image: linear-gradient(
 45deg
 , rgba(233, 136, 83, .1), rgba(240, 112, 132, .1));
   }
   #component-loinm .popup {
     background-color: #fff;
-    margin: 2vw;
-    padding: 4vw;
     display: none;
   }
   #component-loinm .package:first-of-type, #component-loinm .popup:first-of-type {
@@ -261,6 +254,13 @@ Need a way to brand yourself? Need an online presence? I offer custom boutique w
   }
   #component-loinm .icon-container, #component-loinm .text-container {
     color: #222;
+  }
+  #component-loinm .package-heading, #component-loinm .popup-heading, #component-loinm .package-price, #component-loinm .popup-price {
+    font-weight: bold;
+  }
+  #component-loinm .package,#component-loinm .popup {
+    margin: 2vw;
+    padding: 4vw;
   }
   #component-loinm .icon-container {
     height: 8vw;
@@ -287,160 +287,56 @@ Need a way to brand yourself? Need an online presence? I offer custom boutique w
     right: 1%;
     font-size: 3vw;
   }
-  #component-loinm .package-heading, #component-loinm .popup-heading, #component-loinm .package-price, #component-loinm .popup-price {
-    font-weight: bold;
-  }
   #component-loinm .package-heading {
     font-size: 4vw;
   }
-  #component-loinm .popup-heading {
+  #component-loinm .package-info, #component-loinm .popup-heading {
     font-size: 2vw;
-  }
-  #component-loinm .package-info {
-    font-size: 2vw;
-  }
-  #component-loinm .popup-info {
-    font-size: 1vw;
   }
   #component-loinm .package-price {
     font-size: 3vw;
   }
+  #component-loinm .popup-info {
+    font-size: 1vw;
+  }
   #component-loinm .popup-price {
     font-size: 1.5vw;
-  }</style>
-      </div>
-      
-      <div class="block" id="block-vvpdx">
-        <div class="primo-component" id="component-vvpdx">
-          <div><div class="outer grid md:grid-cols-2">
-    <div class="card relative rounded-3xl shadow-xl">
-      <div class="icon-container flex items-center absolute rounded-full shadow-xl bg-yellow-500">
-      	<i class="fas fa-shopping-cart"></i>
-      </div>
-      <div>
-        <h3 class="card-heading">E-commerce Theme</h3>
-        <div class="card-info"><p><br></p>
-<p><strong>What’s Included:</strong> Homepage, Collection Page, Product Page, Cart, About Us Page, Contact Us Page, Blog</p>
-<p><br></p>
-<p><strong>How:</strong> I will work with the client to choose a theme as a base for the website we will use the customizer built into the theme for 90% of the development.</p>
-<p><br></p>
-<p><strong>Why:</strong> I will connect the URL’s, walk through Shopify Admin with the client, Set Up shipping and order processing, and make tweaks to the theme to get what the client needs out of it.</p>
-<p><br></p>
-<p><strong>Additional:</strong> Any custom dev hours over 20 will cost $80 per hour</p>
-<p><br></p></div>
-        <p class="card-price">Cost: $3500 to $5000</p>
-      </div>￰    
-    </div>
-    <div class="card relative rounded-3xl shadow-xl">
-      <div class="icon-container flex items-center absolute rounded-full shadow-xl bg-yellow-500">
-      	<i class="fas fa-newspaper"></i>
-      </div>
-      <div>
-        <h3 class="card-heading">Brochure Site</h3>
-        <div class="card-info"><p><br></p>
-<p><strong>What’s Included:</strong> Homepage, About Us Page, Contact Us Page, Blog, Gallery/Lookbook, 1 Additional page of Clients choice <br></p>
-<p><strong>How:</strong> I will work with the client to choose a theme as a base for the website we will use the customizer built into the theme for 90% of the development. <br></p>
-<p><strong>Why:</strong> I will connect the URL’s, walk through CMS (TBD) with the client, and make tweaks to the theme to get what the client needs out of it. <br></p>
-<p><strong>Additional:</strong>Any custom dev hours over 20 will cost $80 per hour</p>
-<p><br></p></div>
-        <p class="card-price">Cost: $2500 to $4000</p>
-      </div>￰    
-    </div>
-    <div class="card relative rounded-3xl shadow-xl">
-      <div class="icon-container flex items-center absolute rounded-full shadow-xl bg-yellow-500">
-      	<i class="fas fa-laptop-code"></i>
-      </div>
-      <div>
-        <h3 class="card-heading">Custom Static Site</h3>
-        <div class="card-info"><p><br></p>
-<p><strong>What’s Included:</strong> Homepage, About Us Page, Contact Us Page, Gallery/Lookbook, 3 Additional page of Clients choice <br></p>
-<p><strong>How:</strong> I will create a Custom Static Site for the client <br></p>
-<p><strong>Why:</strong> I will connect the URL’s, walk through CMS (TBD) with the client, and make the site to the clients exact specifications <br></p>
-<p><strong>Additional:</strong> Any custom dev hours over 100 will cost $80 per hour</p>
-<p><br></p></div>
-        <p class="card-price">$8000 to $10000</p>
-      </div>￰    
-    </div>
-    <div class="card relative rounded-3xl shadow-xl">
-      <div class="icon-container flex items-center absolute rounded-full shadow-xl bg-yellow-500">
-      	<i class="fas fa-cart-plus"></i>
-      </div>
-      <div>
-        <h3 class="card-heading">Semi Custom E-Commerce</h3>
-        <div class="card-info"><p><br></p>
-<p><strong>What’s Included:</strong>Homepage, Collection Page, Product Page, Cart, About Us Page, Contact Us Page, Blog, Custom Collection and Product Pages for special products, 5 additional pages of clients choosing, app integrations, subscriptions (optional) <br></p>
-<p><strong>How:</strong> I will work with the client to choose a theme as a base for the website we will use the customizer built into the theme for 50% of the development. <br></p>
-<p><strong>Why:</strong> I will connect the URL’s, walk through Shopify Admin with the client, Set Up shipping and order processing, and make tweaks to the theme to get what the client needs out of it. <br></p>
-<p><strong>Additional:</strong> Any custom dev hours over 80 will cost $80 per hour</p>
-<p><br></p></div>
-        <p class="card-price">$7500 to $11000</p>
-      </div>￰    
-    </div>
-    <div class="card relative rounded-3xl shadow-xl">
-      <div class="icon-container flex items-center absolute rounded-full shadow-xl bg-yellow-500">
-      	<i class="fas fa-chart-line"></i>
-      </div>
-      <div>
-        <h3 class="card-heading">Fully Custom E-Commerce</h3>
-        <div class="card-info"><p><br></p>
-<p><strong>What’s Included:</strong> Homepage, Collection Page, Product Page, Cart, About Us Page, Contact Us Page, Blog, Custom Collection and Product Pages for special products, 5 additional pages of clients choosing, app integrations, subscriptions (optional) <br></p>
-<p><strong>How:</strong> I will create a custom theme from the ground up for the client and create all Pages, Products, etc. fully customized to the clients specification <br></p>
-<p><strong>Why:</strong> I will connect the URL’s, walk through Shopify Admin with the client, Set Up shipping and order processing, and make tweaks to the theme to get what the client needs out of it. <br></p>
-<p><strong>Additional:</strong> Any custom dev hours over 200 will cost $80 per hour</p>
-<p><br></p></div>
-        <p class="card-price">$12000 to $18000</p>
-      </div>￰    
-    </div>
-    <div class="card relative rounded-3xl shadow-xl">
-      <div class="icon-container flex items-center absolute rounded-full shadow-xl bg-yellow-500">
-      	<i class="fas fa-calendar-alt"></i>
-      </div>
-      <div>
-        <h3 class="card-heading">Monthly Retainer</h3>
-        <div class="card-info"><p><br></p>
-<p><strong>What’s Included:</strong> 10-20 hours of development time per month, monthly analytics reports, UX/UI improvements, content updates, product updates, bug fixes, emergency development
-<br></p>
-<p><strong>How:</strong> I will create a custom theme from the ground up for the client and create all Pages, Products, etc. fully customized to the clients specification 
-<br></p>
-<p><strong>Why:</strong>Working with Shopify or any other CMS for that matter can be daunting, I will train you on anything you need included in the project build but it may be more work than you expect or working with the backend of your website is a little out of your wheelhouse. I will be able to make any updates for you quickly and all for a low flat rate.<br></p>
-<p><strong>Additional:</strong> Any custom dev hours over agreed amount will cost $80 per hour</p>
-<p><br></p></div>
-        <p class="card-price">$500 to $1200 a month</p>
-      </div>￰    
-    </div>
-</div></div>
-          
-        </div>
-        <style type="text/css">#component-vvpdx .card {
-    background-image: linear-gradient(
-45deg
-, rgba(233, 136, 83, .1), rgba(240, 112, 132, .1));
-    margin: 2vw;
-    padding: 4vw;
   }
-  #component-vvpdx .card * {
-    color: #222;
-  }
-  #component-vvpdx .icon-container {
-    height: 8vw;
-    width: 8vw;
-    left: -1.5vw;
-    top: -3vw;
-  }
-  #component-vvpdx i {
-    font-size: 5vw;
-    margin: 0 auto;
-  }
-  #component-vvpdx .card-heading {
-    font-size: 4vw;
-    font-weight: bold;
-  }
-  #component-vvpdx .card-info {
-    font-size: 2vw;
-  }
-  #component-vvpdx .card-price {
-    font-size: 3vw;
-    font-weight: bold;
+  @media (max-width: 768px) {
+    #component-loinm .package,#component-loinm .popup {
+      margin: 3vw;
+      padding: 6vw;
+    }
+
+    #component-loinm .icon-container, #component-loinm .popup-icon-container {
+      height: 12vw;
+      width: 12vw;
+      left: -2.5vw;
+      top: -5vw;
+    }
+
+    #component-loinm .icon-container i, #component-loinm .popup-icon-container i {
+      font-size: 7vw;
+      margin: 0 auto;
+    }
+
+    #component-loinm .modal i {
+      top: 7%;
+      right: 1%;
+      font-size: 5vw;
+    }
+
+    #component-loinm .package-heading, #component-loinm .popup-heading {
+      font-size: 8vw;
+    }
+
+    #component-loinm .package-info, #component-loinm .popup-info {
+      font-size: 5vw;
+    }
+
+    #component-loinm .package-price, #component-loinm .popup-price {
+      font-size: 6vw;
+    }
   }</style>
       </div>
       
