@@ -868,7 +868,7 @@ h3 {
   will-change: opacity, visibility;
 }
 
-.heading, .card {
+.heading {
   transform: translateY(5vh);
   transition: opacity 0.8s ease-in, transform 1.2s ease-out;
 }
@@ -883,7 +883,7 @@ h3 {
   transition: opacity 1.2s ease-in, transform 1.8s ease-out;
 }
 
-.feature-title {
+.feature-title, .card {
   transition: opacity 0.8s ease-in, transform 1.2s ease-out;
 }
 
