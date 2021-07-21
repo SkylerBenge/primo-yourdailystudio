@@ -487,10 +487,12 @@ Need a way to brand yourself? Need an online presence? I offer custom boutique w
       if ( $(window).scrollTop() >= distance - $(window).height() / 1.4 ) {
           block.find('.body').addClass('is-visible');
           block.find('.subfeature').addClass('is-visible');
-          block.find('li').each(function(i){
+          block.find('.image-column').each(function(i){
             setTimeout(function(){
               $('.mosaic').eq(i).addClass('pop-up');
-            }, 400 * i);
+              $('.mosaic').eq(i+3).addClass('pop-up');
+              $('.mosaic').eq(i+6).addClass('pop-up');
+            }, 600 * i);
           });        
       }      
     }
