@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="./styles.css" />
         
-        <link rel="icon" type="image/png" href="/primo-yourdailystudio/assets/yds-fav.png"/>
+        <link rel="icon" type="image/png" href="/assets/yds-fav.png"/>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -26,7 +26,7 @@
 </div>
 <div class="grid grid-cols-2 md:grid-cols-3">
   <div>
-    <a href="packages/" class="button w-full text-white font-bold rounded-lg transition ease-in-out duration-300">Our Packages</a>
+    <a href="/packages" class="button w-full text-white font-bold rounded-lg transition ease-in-out duration-300">Our Packages</a>
   </div>    
   <div class="hidden md:block"></div>
   <div>
@@ -589,7 +589,7 @@
           <div><div class="footer">
   <div class="grid grid-cols-2 md:grid-cols-3">
     <div>
-      <a href="packages/" class="button w-full text-white font-bold rounded-lg transition ease-in-out duration-300">Our Packages</a>
+      <a href="/packages" class="button w-full text-white font-bold rounded-lg transition ease-in-out duration-300">Our Packages</a>
     </div>    
     <div class="hidden md:block"></div>
     <div>
@@ -645,11 +645,18 @@
           block.find('.body').addClass('is-visible');
           block.find('.subfeature').addClass('is-visible');
           block.find('.image-column').each(function(i){
-            setTimeout(function(){
-              $('.mosaic').eq(i).addClass('pop-up');
-              $('.mosaic').eq(i+3).addClass('pop-up');
-              $('.mosaic').eq(i+6).addClass('pop-up');
-            }, 600 * i);
+            if($(window).width() > 767) {
+              setTimeout(function(){
+                $('.mosaic').eq(i).addClass('pop-up');
+                $('.mosaic').eq(i+3).addClass('pop-up');
+                $('.mosaic').eq(i+6).addClass('pop-up');
+              }, 600 * i);
+            }
+            else {
+              setTimeout(function(){
+                $('.mosaic').eq(i).addClass('pop-up');
+              }, 600 * i);
+            }
           });        
       }      
     }
